@@ -1,0 +1,7 @@
+{
+    "slidev.include": [
+        "**/slides.md",
+        "signals-talk.md"
+    ],
+    "slidev.preview-sync": false
+}
