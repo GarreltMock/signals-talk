@@ -25,10 +25,10 @@ title: Inhalt
 class: content-center
 ---
 
-# Was euch erwartet
+# Was euch heute erwartet
 
 1. Was sind Signals
-2. Geschichte der Reaktivität
+2. Blick in die Vergangenheit
 3. Under the Hood
 4. Live Coding
 5. Common Pitfalls
@@ -54,17 +54,29 @@ src: ./pages/pitfalls.md
 ---
 
 ---
-layout: end
----
 
-# Das Ende
+# Bonus
 
-Was habt ihr für Fragen?
+What's next (for Signals / you)
+
+- Javascript Proposal
+- Double Linked Lists - Preact
 
 ---
 title: Quellen
 ---
 
+# Quellen
+
 - https://preactjs.com/guide/v10/signals/
 - https://dev.to/this-is-learning/the-evolution-of-signals-in-javascript-8ob
 - https://youtu.be/1TSLEzNzGQM
+- https://youtu.be/kkUuaqDBSqA
+
+---
+class: content-center flex justify-center items-center flex-col
+---
+
+# Das Ende
+
+Was habt ihr für Fragen?

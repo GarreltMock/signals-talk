@@ -2,7 +2,7 @@
 layout: section
 ---
 
-# The Code
+# Lets Code
 
 ---
 layout: editor
@@ -16,53 +16,23 @@ title: Live Coding
 
 ::right::
 
-```ts {monaco-run} {height:'80%',outputHeight:'20%'}
-// @ts-nocheck
+```js {monaco-run} {height:'80%',outputHeight:'20%',editorOptions:{fontSize:18}}
 const button = document.getElementById("button1")
 const text = document.getElementById("text1")
+```
 
+<!--
 button.addEventListener("click", () => {
     console.log("Hallo")
     text.innerHTML = "Lets go"
 })
-```
+-->
 
 ---
 title: Ergebnis
 hide: true
 ---
 
-```js
-let subscriber = null
+# Result
 
-export function signal(value) {
-    const subscriptions = new Set()
-
-    return {
-        get value() {
-            if (subscriber) {
-                subscriptions.add(subscriber)
-            }
-            return value
-        },
-        set value(updated) {
-            value = updated
-            subscriptions.forEach((fn) => fn())
-        },
-    }
-}
-
-export function effect(fn) {
-    subscriber = fn
-    fn()
-    subscriber = null
-}
-
-export function computed(fn) {
-    const computed = signal()
-    effect(() => {
-        computed.value = fn()
-    })
-    return computed
-}
-```
+<<< @/snippets/signals.js

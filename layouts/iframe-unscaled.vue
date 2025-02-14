@@ -9,7 +9,8 @@ const unscaledTransform = `scale(calc(1 / ${props.scale ?? "var(--slidev-slide-s
 </script>
 
 <template>
-    <div class="slidev-layout h-full w-full flex p-4">
+    <div class="slidev-layout h-full w-full flex flex-col p-4">
+        <span class="text-gray text-4">{{ url }}</span>
         <div class="rounded-lg overflow-hidden flex-1">
             <div relative :style="{ width: unscaledSize, height: unscaledSize }">
                 <iframe

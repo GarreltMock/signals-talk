@@ -56,19 +56,19 @@ title: Pitfall 2
 
 # Fallgrube #2
 
-eher Vue spezifisch
+eher <logos-vue/> spezifisch
 
 ```ts twoslash
 import { ref, reactive } from "vue"
 
 class Test {
-    readonly a = ref(false)
+    a = ref(false)
 }
 
 const foo = new Test()
-const bar = reactive(foo)
-
 console.log(foo.a.value)
+
+const bar = reactive(foo)
 console.log(bar.a.value)
 ```
 
@@ -77,3 +77,7 @@ title: Pitfall 3
 ---
 
 # Fallgrube #3
+
+<!--
+Vielleicht auf Framwork Ebene. Unsubscribe handling. Zumindest könnte man da den Bogen zum Observer Pattern spannen
+-->
