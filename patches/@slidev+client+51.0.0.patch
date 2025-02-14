@@ -1,0 +1,45 @@
+diff --git a/node_modules/@slidev/client/builtin/Monaco.vue b/node_modules/@slidev/client/builtin/Monaco.vue
+index f5fa74e..ed4fff4 100644
+--- a/node_modules/@slidev/client/builtin/Monaco.vue
++++ b/node_modules/@slidev/client/builtin/Monaco.vue
+@@ -95,6 +95,8 @@ const stopWatchTypesLoading = whenever(
+   },
+ )
+ 
++const getZoomFactor = () => (window.devicePixelRatio / 2) || 1;
++
+ onMounted(async () => {
+   // Lazy load monaco, so it will be bundled in async chunk
+   const { default: setup } = await import('../setup/monaco')
+@@ -112,12 +114,12 @@ onMounted(async () => {
+     lineNumbersMinChars: 3,
+     bracketPairColorization: { enabled: false },
+     tabSize: 2,
+-    fontSize: 11.5,
+     fontFamily: 'var(--slidev-code-font-family)',
+     scrollBeyondLastLine: false,
+     useInlineViewWhenSpaceIsLimited: false,
+     ...editorOptions,
+     ...props.editorOptions,
++    fontSize: (props.editorOptions?.fontSize ?? 11.5) * getZoomFactor()
+   } satisfies monaco.editor.IStandaloneEditorConstructionOptions & monaco.editor.IDiffEditorConstructionOptions
+ 
+   let editableEditor: monaco.editor.IStandaloneCodeEditor
+@@ -198,6 +200,17 @@ onMounted(async () => {
+ 
+   nextTick(() => monaco.editor.remeasureFonts())
+   setTimeout(() => monaco.editor.remeasureFonts(), 1000)
++
++  const updateFontSize = () => {
++    const zoom = getZoomFactor();
++    const newFontSize = (props.editorOptions?.fontSize ?? 12) * zoom;
++    editableEditor.updateOptions({ fontSize: newFontSize });
++    monaco.editor.remeasureFonts();
++  };
++  window.addEventListener('resize', updateFontSize);
++  window.addEventListener('devicePixelRatioChange', updateFontSize);
++
++  // TODO remove listeners
+ })
+ </script>
+ 
