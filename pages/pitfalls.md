@@ -78,6 +78,40 @@ title: Pitfall 3
 
 # Fallgrube #3
 
+Sideeffects in Computed
+
+```ts
+import { computed, ref } from "vue"
+
+const count = ref(0)
+
+function getNextCount() {
+    count.value += 1
+    return count.value
+}
+
+const double = computed(() => getNextCount() * 2)
+```
+
+<v-clicks>
+
+> Computed is still dirty after getter evaluation, likely because a computed is mutating its own dependency in its getter. State mutations in computed getters should be avoided.
+
+</v-clicks>
+
+<style>
+blockquote {
+    --uno: 'border-red border-l-4 color-red';
+    font-family: var(--prism-font-family);
+}
+</style>
+
 <!--
-Vielleicht auf Framwork Ebene. Unsubscribe handling. Zumindest könnte man da den Bogen zum Observer Pattern spannen
+1. Recursive computed maybe?
+2. Vielleicht auf Framwork Ebene
+    - Unsubscribe handling. Zumindest könnte man da den Bogen zum Observer Pattern spannen
+3. Oder was simples wie: Reactivity geht kaputt bei Objekten
+    - Was aber von den Frameworks für uns gelöst wird
+    - Da hätte man den einen Übergang zu Frameworks
+4. Vielleicht steckt was im Signals 2.0 Stream drin?
 -->

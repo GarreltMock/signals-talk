@@ -77,6 +77,6 @@ title: Quellen
 class: content-center flex justify-center items-center flex-col
 ---
 
-# Das Ende
+# The End
 
 Was habt ihr für Fragen?

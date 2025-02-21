@@ -58,22 +58,26 @@ title: Code Example
 
 <!-- TODO: was genau will ich hier zeigen/sagen? -->
 
-```js {*}{ maxHeight:'80%' }
+```js {*}{ maxHeight:'90%' }
 function observable(value) {
     let _value = value
+
     const subscribers = new Set()
+    function notifySubscriber() {
+        subscribers.forEach((fn) => fn(_value))
+    }
 
     return {
         subscribe(fn) {
             subscribers.add(fn)
             return () => subscribers.delete(fn) // unsubscribe
         },
-        notifySubscriber(value) {
-            subscribers.forEach((fn) => fn(value))
+        get value() {
+            return _value
         },
-        changeValue(v) {
+        set value(v) {
             _value = v
-            this.notifySubscriber(value)
+            notifySubscriber()
         },
     }
 }
@@ -83,17 +87,41 @@ function observable(value) {
 title: Probleme
 ---
 
-# Probleme / Schwierigkeiten
+# Was fehlt?
 
-> TODO: alles
+<v-clicks>
+
+> "Automatic state binding and dependency tracking" - Preact
+
+```js
+const count = observable(1)
+let double = count.value * 2
+const unsubscribe = count.subscribe((value) => (double = value * 2))
+
+console.log(double)
+count.value = 2
+console.log(double)
+```
+
+</v-clicks>
+<v-clicks>
+
+1. Manuelles State Binding
+    - Was ist bei mehreren Abhängigkeiten?
+2. Dependencies sind lose gekoppelt
+    - Wer kümmert sich um das unsubscribe?
+
+</v-clicks>
 
 <!--
 Hier können wir die Definition vom Anfang ranziehen
 "Automatic state binding and dependency tracking"
 
 # Probleme
-1. Manuelles Dependency Tracking
-2. Multiple Dependencies
-3. Subscribers sind im Scope vom Observable
-4. Wer handelt Unsuscribe?
+1. Automatic state binding
+    - Manuelles State Binding
+    - Multiple State Binding
+2. Dependency tracking
+    - Wer handelt Unsuscribe?
+    - Subscribers sind im Scope vom Observable
 -->

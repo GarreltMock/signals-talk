@@ -12,7 +12,7 @@ const items: Entry[] = [
         title: "Angular, Barebone, Knockout",
         description: "Frontend Frameworks mit 3 verschiedenen Reaktivitäts-Modellen",
     },
-    { year: 2013, title: "React", description: "Wow" },
+    { year: 2013, title: "React", description: "TODO: Was will ich hier sagen?" },
     { year: 2021, title: "SolidJS v1", description: "Signals wurde als Begriff geprägt" },
 ]
 

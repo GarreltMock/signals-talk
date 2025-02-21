@@ -32,3 +32,7 @@ h1 {
 :root {
     --slidev-theme-primary: #cfff00;
 }
+
+.slidev-layout blockquote {
+    --uno: "border-l-3";
+}

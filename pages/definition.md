@@ -7,6 +7,7 @@ layout: section
 ---
 title: Definition
 layout: quote
+clicks: 3
 ---
 
 <span class="text-gray">Preact <logos-preact/></span>
@@ -18,7 +19,6 @@ layout: quote
     <span class="text-initial">Automatic state binding and dependency tracking</span>
     allows Signals to provide excellent ergonomics and productivity while eliminating the most common state management footguns.
 </div>
-<span v-click></span>
 
 <!--
 hier kann ich super mit "Automatic state binding and dependency tracking" arbeiten

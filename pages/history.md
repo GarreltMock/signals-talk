@@ -37,12 +37,17 @@ Signals haben es geschafft die fine-grained updates Probleme zu lösen.
 
 ---
 title: Signals nichts neues
-class: content-center flex justify-center items-center flex-col
+class: flex justify-center flex-col relative
 ---
 
-> TODO: mach mal schöner
+<div class="*:text-30 *:leading-[0.8em] *:font-bold">
+    <div v-click>Signals</div>
+    <div v-click>sind</div>
+    <div v-click class="color-orange -mt-4 font-italic">nichts</div>
+    <div v-click class="color-orange -mt-6">neues</div>
+</div>
 
-# Signals sind _nichts neues_
+<div v-click class="absolute text-60 right-40 rotate-20">🤯</div>
 
 ---
 title: Knockout.js Docu
@@ -86,24 +91,23 @@ Wollen wir hier wirlich den Vergleich ziehen?
 
 ---
 title: Heute
+class: flex flex-col h-full
 ---
 
 # Heute
 
 Signals habe eine **massive adoption**
 
-> TODO: animieren
-
 <!-- Vue, Svelte, Angular, SolidJS, Preact, Lit, Javascript :o -->
 
-<div class="*:h-[5em] *:w-[5em] flex justify-center mt-30 gap-4">
-    <logos-vue />
-    <logos-svelte-icon/>
-    <logos-angular-icon/>
-    <logos-solidjs-icon/>
-    <logos-preact/>
-    <logos-lit-icon/>
-    <logos-javascript/>
+<div class="relative grow-1">
+    <logos-vue          v-click class="absolute size-35 top-[5%]  left-[5%]"  v-motion :enter="{ x: 0, y: 0 }"  :initial="{ x: -80, y: -80 }" />
+    <logos-svelte-icon  v-click class="absolute size-35 -top-[5%]  left-[52%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: -80 }" />
+    <logos-angular-icon v-click class="absolute size-18 top-[70%] left-[70%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: 80, x: 80 }" />
+    <logos-solidjs-icon v-click class="absolute size-45 top-[10%] left-[75%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ x: 80 }" />
+    <logos-preact       v-click class="absolute size-28 top-[55%] left-[50%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: 80 }" />
+    <logos-lit-icon     v-click class="absolute size-22 top-[55%] left-[12%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ x: -80, y: 80 }" />
+    <logos-javascript   v-click class="absolute size-40 top-[22%] left-[27%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: -80 }" />
 </div>
 
 <!--
