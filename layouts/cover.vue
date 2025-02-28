@@ -10,14 +10,14 @@
     background-size: cover;
 
     html.dark & {
-        background: url("/img/cover/satellite.jpg") no-repeat center center;
-        /* background: url("/img/cover/tower-dark.jpg") no-repeat center center; */
+        /* background: url("/img/cover/satellite.jpg") no-repeat center center; */
+        background: url("/img/cover/tower-dark.jpg") no-repeat center center;
         background-size: cover;
 
-        justify-content: end;
+        justify-content: start;
         align-items: center;
 
-        /* padding-top: 80px; */
+        padding-top: 80px;
     }
 
     h1 {

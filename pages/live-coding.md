@@ -16,9 +16,10 @@ title: Live Coding
 
 ::right::
 
-```js {monaco-run} {height:'80%',outputHeight:'20%',editorOptions:{fontSize:18}}
+```js {monaco-run} {height:'80%',outputHeight:'20%',editorOptions:{fontSize:18,lineNumbers:true}}
 const button = document.getElementById("button1")
 const text = document.getElementById("text1")
+button.addEventListener("click", () => {})
 ```
 
 <!--
@@ -26,6 +27,9 @@ button.addEventListener("click", () => {
     console.log("Hallo")
     text.innerHTML = "Lets go"
 })
+
+Vielleicht sollte ich eine Art TDD machen.
+Damit man klar von count und double und effect sprechen kann
 -->
 
 ---

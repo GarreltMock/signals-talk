@@ -8,47 +8,42 @@ layout: section
 
 ---
 title: UML
+class: flex flex-col
 ---
 
 # Zur Erinnerung
+
+<div class="grow-1" />
 
 ```mermaid
 classDiagram
 
 direction RL
 
-note for Observable "*notifySubscriber*
-for (**s** of subscriber)
-**s**.update(value)"
-
 note for Observable "*changeValue*
 this.value = value
 notifySubscriber()"
 
+note for Observable "*notifySubscriber*
+for (**s** of subscriber)
+**s**.update(value)"
+
 class Observable {
     value: any
     subscriber: Array~Subscriber~
-    subscribe(sub: Subscriber)
-    unsubscribe(sub): Subscriber)
-    notifySubscriber()
-    changeValue(value: any)
+    + subscribe(sub: Subscriber)
+    + changeValue(value: any)
+    - notifySubscriber()
 }
 
 class Subscriber {
-    <<Interface>>
-    update(value: any)
-}
-class SubscriberA {
-    update(value: any)
-}
-class SubscriberB {
-    update(value: any)
+    + update(value: any)
 }
 
 Observable *-- Subscriber
-Subscriber <|-- SubscriberA
-Subscriber <|-- SubscriberB
 ```
+
+<div class="grow-1" />
 
 ---
 title: Code Example
@@ -56,15 +51,12 @@ title: Code Example
 
 # Code Beispiel
 
-<!-- TODO: was genau will ich hier zeigen/sagen? -->
-
-```js {*}{ maxHeight:'90%' }
+```js {1,21|2-6|8-12,20|8,20,13-19|all}{ maxHeight:'90%' }
 function observable(value) {
-    let _value = value
-
     const subscribers = new Set()
+
     function notifySubscriber() {
-        subscribers.forEach((fn) => fn(_value))
+        subscribers.forEach((fn) => fn())
     }
 
     return {
@@ -73,10 +65,10 @@ function observable(value) {
             return () => subscribers.delete(fn) // unsubscribe
         },
         get value() {
-            return _value
+            return value
         },
-        set value(v) {
-            _value = v
+        set value(updated) {
+            value = updated
             notifySubscriber()
         },
     }
@@ -94,22 +86,28 @@ title: Probleme
 > "Automatic state binding and dependency tracking" - Preact
 
 ```js
-const count = observable(1)
-let double = count.value * 2
-const unsubscribe = count.subscribe((value) => (double = value * 2))
+const countA = observable(1)
+const countB = observable(2)
+let sum = countA.value + countB.value
 
-console.log(double)
-count.value = 2
-console.log(double)
+const setSum = () => (sum = countA.value + countB.value)
+const unsubA = countA.subscribe(setSum)
+const unsubB = countB.subscribe(setSum)
+
+console.log(sum) // 3
+countA.value = 2
+console.log(sum) // 4
 ```
 
 </v-clicks>
+
 <v-clicks>
 
 1. Manuelles State Binding
-    - Was ist bei mehreren Abhängigkeiten?
+    - Umständlich bei mehreren Abhängigkeiten
 2. Dependencies sind lose gekoppelt
-    - Wer kümmert sich um das unsubscribe?
+    - Keine 1:1 Beziehung abgebildet
+    - Beispiel: `countA` und `sum`
 
 </v-clicks>
 
@@ -123,5 +121,5 @@ Hier können wir die Definition vom Anfang ranziehen
     - Multiple State Binding
 2. Dependency tracking
     - Wer handelt Unsuscribe?
-    - Subscribers sind im Scope vom Observable
+    - Deps änderungen sind nicht gut abbildbar
 -->

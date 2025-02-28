@@ -1,14 +1,25 @@
 <script setup>
-import { ref, nextTick, watchEffect } from "vue"
+import { ref, watchEffect } from "vue"
 
+const apiCall = () => new Promise((resolve) => setTimeout(() => resolve(), 0))
 const toggle = ref(true)
 const show = ref(false)
-watchEffect(() => nextTick(() => (show.value = toggle.value)))
+
+watchEffect(async () => {
+    await apiCall()
+    show.value = toggle.value
+})
 </script>
 
 <template>
-    <div class="flex gap-4">
+    <div class="flex items-center gap-4">
         <button class="custom-button" @click="toggle = !toggle">Toggle</button>
-        <h2>{{ show }}</h2>
+        <p class="font-[var(--prism-font-family)] text-6">
+            { show:
+            <span class="color-red">{{ show }}</span>
+            , toggle:
+            <span class="color-green">{{ toggle }}</span>
+            }
+        </p>
     </div>
 </template>

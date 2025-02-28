@@ -64,3 +64,27 @@ console.log(double.value) // 4
     @apply px-6 py-2 rounded-xl text-7 b-2;
 }
 </style>
+
+---
+title: Solid Syntax
+class: content-center
+---
+
+# Alternative Syntax <logos-solidjs-icon />
+
+```js {all|3|4|8|all} { fontSize: $slidev.configs.myEditorFontSize }
+import { createSignal, createEffect } from "solid-js"
+
+const [count, setCount] = createSignal(0)
+const double = () => count() * 2
+createEffect(() => console.log("Effect: " + double()))
+
+console.log(double()) // 2
+setCount(count() + 1) // Effect: 4
+console.log(double()) // 4
+```
+
+<!--
+TODO: Wollen wir das wirklich zeigen?
+Ist so glaube ich kein valider SolidJS Code, weil er nicht im Kontext einer Komponente aufgerufen wird
+-->
