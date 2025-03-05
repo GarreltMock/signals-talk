@@ -6,7 +6,7 @@ type Entry = {
 }
 const items: Entry[] = [
     { year: 1969, title: "LANPAR", description: "Erstes digitales Spreadsheet" },
-    { year: 1985, title: "Excel", description: "Reaktive Daten ermöglichen flexible Anwendungs-Entwicklung" },
+    { year: 1985, title: "Excel", description: "Reaktive Daten erweisen sich als sehr mächtig" },
     {
         year: 2010,
         title: "Angular, Barebone, Knockout",

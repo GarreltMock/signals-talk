@@ -30,3 +30,35 @@ function derived(fn) {
     })
     return derived
 }
+
+// =================================
+
+const depsMap = new Map()
+
+function removeEffect(fn) {
+    depsMap.forEach((deps, dep) => {
+        if (deps.has(fn)) {
+            deps.delete(fn)
+        }
+    })
+}
+
+function signal2(value) {
+    const refObject = {
+        get value() {
+            if (subscriber) {
+                if (!depsMap.has(refObject)) {
+                    depsMap.set(refObject, new Set())
+                }
+                depsMap.get(refObject).add(subscriber)
+            }
+            return value
+        },
+        set value(updated) {
+            value = updated
+            depsMap.get(refObject).forEach((fn) => fn())
+        },
+    }
+
+    return refObject
+}

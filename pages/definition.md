@@ -4,6 +4,8 @@ layout: section
 
 # Was sind Signals?
 
+und wo kommen sie eigentlich her?
+
 ---
 title: Definition
 layout: quote
@@ -15,12 +17,13 @@ clicks: 3
 <h1 class="!bg-transparent">Signals are <span v-mark.underline.orange>reactive primitives</span> for managing application state</h1>
 
 <div v-click class="text-6" :class="$clicks > 2 && 'text-gray'">
-    What makes Signals unique is that state changes automatically update components and UI in the most efficient way possible.<br/>
     <span class="text-initial">Automatic state binding and dependency tracking</span>
     allows Signals to provide excellent ergonomics and productivity while eliminating the most common state management footguns.
 </div>
 
 <!--
+What makes Signals unique is that state changes automatically update components and UI in the most efficient way possible.<br/>
+
 hier kann ich super mit "Automatic state binding and dependency tracking" arbeiten
 Auch zum Zeigen was dem Observer Pattern fehlt
 
@@ -39,9 +42,9 @@ title: Beispiel
 class: content-center
 ---
 
-# Code Beispiel
+# Wie sieht das aus?
 
-```js { fontSize: $slidev.configs.myEditorFontSize }
+```js {all|3|4|5|7-9|all} { fontSize: $slidev.configs.myEditorFontSize }
 import { signal, computed, effect } from "@preact/signals"
 
 const count = signal(1)
@@ -54,9 +57,9 @@ console.log(double.value) // 4
 ```
 
 <div class="key-components flex gap-8 justify-center mt-8">
-    <div v-click>signal</div>
-    <div v-click>computed</div>
-    <div v-click>effect</div>
+    <div v-click="1">signal</div>
+    <div v-click="2">computed</div>
+    <div v-click="3">effect</div>
 </div>
 
 <style>
@@ -65,9 +68,14 @@ console.log(double.value) // 4
 }
 </style>
 
+<!--
+Alternative Syntax kurz erwähnen
+-->
+
 ---
 title: Solid Syntax
 class: content-center
+hide: true
 ---
 
 # Alternative Syntax <logos-solidjs-icon />

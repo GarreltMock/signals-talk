@@ -22,7 +22,7 @@ Signals auspacken
 ```js
 const foo = signal(1)
 
-console.log(foo) // logs: { value: (...) }
+console.log(foo) // { value: (...) }
 
 const a = foo.value // a is not reactive anymore
 ```
@@ -40,9 +40,9 @@ Asynchrone Subscriber
 const apiCall = () => new Promise((resolve) => setTimeout(() => resolve(), 0))
 
 const toggle = signal(true)
-const show = signal(false)
 const switchToggle = () => (toggle.value = !toggle.value)
 
+const show = signal(false)
 effect(async () => {
     await apiCall()
     show.value = toggle.value
@@ -53,9 +53,9 @@ effect(async () => {
 const apiCall = () => new Promise((resolve) => setTimeout(() => resolve(), 0))
 
 const toggle = signal(true)
-const show = signal(false)
 const switchToggle = () => (toggle.value = !toggle.value)
 
+const show = signal(false)
 effect(() => {
     const currentToggle = toggle.value // Jetzt wird `toggle` getrackt!
     apiCall().then(() => (show.value = currentToggle))
@@ -68,7 +68,7 @@ effect(() => {
   <PitfallFixed v-click="'+3'" />
 </div>
 
-<blockquote v-click="'+1'" class="border-red! mt-2">
+<blockquote v-click="'+1'" class="border-yellow! mt-2">
 Achtung: Hier können Race-Conditions entstehen
 </blockquote>
 
@@ -103,6 +103,7 @@ blockquote {
 
 ---
 title: Pitfall
+hide: true
 ---
 
 # Bonus Fallgrube

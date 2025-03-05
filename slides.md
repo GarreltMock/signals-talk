@@ -24,21 +24,58 @@ layout: cover
 </div>
 
 ---
+title: Heute
+class: flex flex-col h-full
+---
+
+# Signals überall
+
+<!-- Vue, Svelte, Angular, SolidJS, Preact, Lit, Javascript :o -->
+
+<div class="relative grow-1">
+    <logos-vue          v-click class="absolute size-35 top-[5%]  left-[5%]"  v-motion :enter="{ x: 0, y: 0 }"  :initial="{ x: -80, y: -80 }" />
+    <logos-svelte-icon  v-click class="absolute size-35 -top-[5%] left-[54%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: -80 }" />
+    <logos-angular-icon v-click class="absolute size-32 top-[65%] left-[75%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: 80, x: 80 }" />
+    <logos-solidjs-icon v-click class="absolute size-30 top-[15%] left-[78%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ x: 80 }" />
+    <logos-preact       v-click class="absolute size-28 top-[50%] left-[55%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: 80 }" />
+    <logos-lit-icon     v-click class="absolute size-22 top-[55%] left-[12%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ x: -80, y: 80 }" />
+    <logos-qwik-icon    v-click class="absolute size-20 top-[75%] left-[33%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: 80 }" />
+    <logos-javascript   v-click class="absolute size-40 top-[22%] left-[27%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: -80 }" />
+</div>
+
+---
+title: Key Point
+class: content-center
+---
+
+<div class="text-8xl font-bold text-center">Signals sind <span class="color-orange">nicht</span> kompliziert</div>
+
+<!--
+Frage ans Publikum:
+Wer kennt Signals?
+Wer weiß wie sie unter der Haube funktionieren?
+  Ok. bei euch würde mich am Ende besonders interessieren, ob ihr noch was mitnehmen konntet
+-->
+
+---
 layout: about-me
 ---
+
+<!--
+Hier könnte ich einen kleinen Witz mit erstem Talk + Dark vs. Light Mode machen
+-->
 
 ---
 title: Inhalt
 class: content-center
+hide: true
 ---
 
 # Was euch heute erwartet
 
-1. Was sind Signals
-2. Blick in die Vergangenheit
-3. Under the Hood
-4. Live Coding
-5. Common Pitfalls
+1. Einordnung + Historie
+2. Blick unter die Haube
+3. Common Pitfalls
 
 ---
 src: ./pages/definition.md
@@ -61,12 +98,43 @@ src: ./pages/pitfalls.md
 ---
 
 ---
+title: Zusammenfassung
+---
+
+<!-- # [Signals sind...]{class=italic}
+
+> TODO
+
+<div class="flex flex-col gap-4 content-center mt-10">
+  <div class="text-18 font-bold">nicht <span class="color-orange">neu</span></div>
+  <div class="text-18 font-bold">nicht <span class="color-orange">kompliziert</span></div>
+  <div class="text-18 font-bold">nicht <span class="color-orange">4-free</span></div>
+</div> -->
+
+<span class="text-14">Jetzt wisst ihr</span>
+
+<div class="flex flex-col gap-4 content-center mt-10 text-14 font-bold">
+  <div v-click><span class="italic font-normal text-10">1.</span> Woher <span class="color-orange">Signals</span> kommen</div>
+  <div v-click><span class="italic font-normal text-10">2.</span> Wie sie <span class="color-orange">implementiert</span> sind</div>
+  <div v-click><span class="italic font-normal text-10">3.</span> Worauf ihr <span class="color-orange">achten</span> müsst</div>
+</div>
+
+<!--
+1. Signals sind nichts neues
+    - Sie haben nur auf ihren richtigen Moment gewartet
+2. Signals sind nicht kompliziert
+    - Abwandlung des Observer Patterns
+3. Signals sind nicht for free
+    - Es gibt ein paar Pitfalls die wir beachten müssen
+-->
+
+---
 
 # Bonus
 
 What's next (for Signals / you)
 
-- [TC38 Javascript Proposal](https://github.com/tc39/proposal-signals?tab=readme-ov-file)
+- [TC39 Javascript Proposal](https://github.com/tc39/proposal-signals?tab=readme-ov-file)
 - [Double Linked Lists - Preact](https://preactjs.com/blog/signal-boosting/)
 - [Alien Signals](https://github.com/stackblitz/alien-signals)
 - [Signals 2.0](https://www.youtube.com/watch?v=xnmvxWEK25I)
@@ -88,7 +156,7 @@ class: flex flex-col
 
 Credits{class=m-0!}
 
-::div{class='font-200'}
+::div{class='font-200 text-xs'}
 slides created with sli.dev  
 icons from Iconify  
 images from Pexels
@@ -98,9 +166,7 @@ images from Pexels
 class: content-center flex justify-center items-center flex-col
 ---
 
-# The End
-
-Was habt ihr für Fragen?
+# Was habt ihr für Fragen?
 
 <div class="absolute bottom-4 right-4">
   <span>Slides</span>
@@ -108,5 +174,5 @@ Was habt ihr für Fragen?
 </div>
 
 <!--
-TODO: slides QR code
+TODO: slides QR code, vielleicht zu einem Google Forms Link
 -->

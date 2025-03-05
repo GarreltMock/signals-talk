@@ -2,7 +2,7 @@
 layout: section
 ---
 
-# Lets Code
+# Let's Code
 
 ---
 layout: editor

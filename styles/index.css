@@ -36,3 +36,7 @@ h1 {
 .slidev-layout blockquote {
     --uno: "border-l-3";
 }
+
+.color-primary {
+    color: var(--slidev-theme-primary);
+}

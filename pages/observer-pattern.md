@@ -2,18 +2,26 @@
 layout: section
 ---
 
-# Under the Hood 👀
+# Blick unter die Haube 👀
 
-<v-click><p>Observer Pattern</p></v-click>
+---
+title: stichwort
+class: flex flex-col items-center justify-center
+---
+
+<h2 class="mb-2">Stichwort</h2>
+<h1 class="color-orange text-6xl!">Observer Pattern</h1>
 
 ---
 title: UML
 class: flex flex-col
 ---
 
-# Zur Erinnerung
+# Observer Pattern
 
 <div class="grow-1" />
+
+<v-clicks>
 
 ```mermaid
 classDiagram
@@ -42,6 +50,8 @@ class Subscriber {
 
 Observable *-- Subscriber
 ```
+
+</v-clicks>
 
 <div class="grow-1" />
 
@@ -107,7 +117,7 @@ console.log(sum) // 4
     - Umständlich bei mehreren Abhängigkeiten
 2. Dependencies sind lose gekoppelt
     - Keine 1:1 Beziehung abgebildet
-    - Beispiel: `countA` und `sum`
+    - Wer kümmert sich um das unsubscriben?
 
 </v-clicks>
 
