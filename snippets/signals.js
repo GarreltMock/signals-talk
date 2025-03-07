@@ -32,11 +32,13 @@ function derived(fn) {
 }
 
 // =================================
+// Mit Deps Tracking
+// =================================
 
 const depsMap = new Map()
 
 function removeEffect(fn) {
-    depsMap.forEach((deps, dep) => {
+    depsMap.forEach((deps) => {
         if (deps.has(fn)) {
             deps.delete(fn)
         }

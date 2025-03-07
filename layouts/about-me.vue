@@ -7,7 +7,7 @@
                 <ul>
                     <li>5+ Jahre Frontend Erfahrung</li>
                     <li>
-                        Fokus auf Vue.js
+                        Fokus auf Vue
                         <logos-vue class="inline-block h-[1em]" />
                     </li>
                     <li>Bad Nauheim, Deutschland 🇩🇪</li>
@@ -32,6 +32,7 @@
                     <img src="/img/games/wb.png" class="inline-block h-[1em] w-[1em]" />
                     <img src="/img/games/qp.png" class="inline-block h-[1em] w-[1em]" />
                     <img src="/img/games/4pics.png" class="inline-block h-[1em] w-[1em]" />
+                    <img src="/img/games/classics.png" class="inline-block h-[1em] w-[1em]" />
                 </span>
             </div>
             <figure class="flex justify-center w-1/2">

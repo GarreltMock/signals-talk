@@ -14,27 +14,30 @@ clicks: 3
 
 <span class="text-gray">Preact <logos-preact/></span>
 
-<h1 class="!bg-transparent">Signals are <span v-mark.underline.orange>reactive primitives</span> for managing application state</h1>
+<h1 class="!bg-transparent">Signals sind <span v-mark.underline.orange="{padding: -10}">reaktive Grundbausteine</span> zur Verwaltung des Anwendungszustands</h1>
 
-<div v-click class="text-6" :class="$clicks > 2 && 'text-gray'">
-    <span class="text-initial">Automatic state binding and dependency tracking</span>
-    allows Signals to provide excellent ergonomics and productivity while eliminating the most common state management footguns.
+<div v-click class="text-6" :class="$clicks > 2 && 'text-gray/60'">
+    Durch <span class="text-initial">automatische Zustandsbindung und Abhängigkeitsverfolgung</span>
+    bieten Signals eine hervorragende Benutzerfreundlichkeit und Produktivität, während sie die häufigsten Fallstricke der Zustandsverwaltung vermeiden.
 </div>
 
 <!--
-What makes Signals unique is that state changes automatically update components and UI in the most efficient way possible.<br/>
+Quelle: https://preactjs.com/guide/v10/signals/
 
-hier kann ich super mit "Automatic state binding and dependency tracking" arbeiten
-Auch zum Zeigen was dem Observer Pattern fehlt
+Signals are reactive primitives for managing application state.
+What makes Signals unique is that state changes automatically update components and UI in the most efficient way possible. Automatic state binding and dependency tracking allows Signals to provide excellent ergonomics and productivity while eliminating the most common state management footguns.
+Signals are effective in applications of any size, with ergonomics that speed up the development of small apps, and performance characteristics that ensure apps of any size are fast by default.
+-->
 
+<!--
 Automatic state binding: Wir binden den state eines Signals automatisch an einen oder sogar mehrere andere: es muss kein aktives Subscribe gemacht werden
 Dependency Tracking: Das Observable hat einen besseren Überblick über die Subscriber
 -->
 
 <!--
-Quelle: https://preactjs.com/guide/v10/signals/
-...
-Signals are effective in applications of any size, with ergonomics that speed up the development of small apps, and performance characteristics that ensure apps of any size are fast by default.
+Ein “Primitive” ist eine einfache, aber leistungsstarke Einheit, auf der komplexere Mechanismen aufgebaut werden können.
+Signals sind die elementarste Form eines reaktiven Zustands, ähnlich wie Variablen in einer Programmiersprache, aber mit eingebauter Reaktivität.
+zb. Promises sind primitive Bausteine für asynchrone Abläufe.
 -->
 
 ---

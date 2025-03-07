@@ -142,11 +142,13 @@ function mixColors(start: string, end: string, steps: number) {
 }
 
 .entry .timeline-bar::after {
-    transition: opacity 0.2s 1.1s;
+    transition:
+        transform 0.1s 1s,
+        opacity 0.02s 1s;
 }
 
 .entry .information {
-    transition: opacity 0.2s 1.2s;
+    transition: opacity 0.2s 1.1s;
 }
 
 .entry.slidev-vclick-hidden {
@@ -167,6 +169,12 @@ function mixColors(start: string, end: string, steps: number) {
     }
 
     .timeline-bar::after {
+        transform: translate(-40%, -40%);
+        opacity: 0;
+    }
+
+    .timeline-bar.reverse::after {
+        transform: translate(40%, 40%);
         opacity: 0;
     }
 }

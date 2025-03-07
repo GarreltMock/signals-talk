@@ -23,8 +23,11 @@ Signals auspacken
 const foo = signal(1)
 
 console.log(foo) // { value: (...) }
+if (foo) {
+    // ist immer true
+}
 
-const a = foo.value // a is not reactive anymore
+const a = foo.value // a ist nicht mehr reaktiv
 ```
 
 ---
@@ -33,9 +36,64 @@ title: Pitfall
 
 # Fallgrube #2
 
+Rekursions Problem
+
+```ts
+const count = signal(0)
+
+effect(() => {
+    count.value = count.value + 1
+})
+```
+
+<v-clicks>
+
+> Uncaught RangeError: Maximum call stack size exceeded
+
+</v-clicks>
+
+<style>
+blockquote {
+    --uno: 'border-red border-l-4 color-red';
+    font-family: var(--prism-font-family);
+}
+</style>
+
+---
+title: Pitfall
+---
+
+# Fallgrube #3
+
 Asynchrone Subscriber
 
-````md magic-move {at: 2}
+````md magic-move {at:2}
+```ts
+const apiCall = () => new Promise((resolve) => setTimeout(() => resolve(), 0))
+
+const toggle = signal(true)
+const switchToggle = () => (toggle.value = !toggle.value)
+
+const show = signal(false)
+effect(async () => {
+    await apiCall()
+    show.value = toggle.value
+})
+```
+
+```ts {all|7,10|1-2,5,7,10|1,3,5,7,10|1,3,5,8|1,4,5,8|4,9}
+effect(fn) {
+    activeSubscriber = fn
+    fn()
+    activeSubscriber = null
+}
+
+effect(async () => {
+    await apiCall()
+    show.value = toggle.value
+})
+```
+
 ```ts
 const apiCall = () => new Promise((resolve) => setTimeout(() => resolve(), 0))
 
@@ -65,41 +123,12 @@ effect(() => {
 
 <div class="relative mt-2">
   <Pitfall class="absolute" v-click="[1,2]" />
-  <PitfallFixed v-click="'+3'" />
+  <PitfallFixed v-click="11" />
 </div>
 
-<blockquote v-click="'+1'" class="border-yellow! mt-2">
+<blockquote v-click="12" class="border-yellow! mt-2">
 Achtung: Hier können Race-Conditions entstehen
 </blockquote>
-
----
-title: Pitfall
----
-
-# Fallgrube #3
-
-Rekursions Problem
-
-```ts
-const count = signal(0)
-
-effect(() => {
-    count.value = count.value + 1
-})
-```
-
-<v-clicks>
-
-> Uncaught RangeError: Maximum call stack size exceeded
-
-</v-clicks>
-
-<style>
-blockquote {
-    --uno: 'border-red border-l-4 color-red';
-    font-family: var(--prism-font-family);
-}
-</style>
 
 ---
 title: Pitfall

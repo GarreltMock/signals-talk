@@ -9,7 +9,7 @@ title: stichwort
 class: flex flex-col items-center justify-center
 ---
 
-<h2 class="mb-2">Stichwort</h2>
+<h2 class="mb-2 text-10!">Stichwort</h2>
 <h1 class="color-orange text-6xl!">Observer Pattern</h1>
 
 ---
@@ -40,6 +40,7 @@ class Observable {
     value: any
     subscriber: Array~Subscriber~
     + subscribe(sub: Subscriber)
+    + unsubscribe(sub: Subscriber)
     + changeValue(value: any)
     - notifySubscriber()
 }
@@ -61,25 +62,24 @@ title: Code Example
 
 # Code Beispiel
 
-```js {1,21|2-6|8-12,20|8,20,13-19|all}{ maxHeight:'90%' }
+```js {1,21|2-3|5-11,19|5,12-19|all}{ maxHeight:'90%' }
 function observable(value) {
     const subscribers = new Set()
-
-    function notifySubscriber() {
-        subscribers.forEach((fn) => fn())
-    }
+    const notifySubscriber = () => subscribers.forEach((fn) => fn())
 
     return {
         subscribe(fn) {
             subscribers.add(fn)
-            return () => subscribers.delete(fn) // unsubscribe
         },
-        get value() {
-            return value
+        unsubscribe(fn) {
+            subscribers.delete(fn)
         },
         set value(updated) {
             value = updated
             notifySubscriber()
+        },
+        get value() {
+            return value
         },
     }
 }
@@ -93,20 +93,19 @@ title: Probleme
 
 <v-clicks>
 
-> "Automatic state binding and dependency tracking" - Preact
+> "Automatische Zustandsbindung und Abhängigkeitsverfolgung" - Preact
 
 ```js
-const countA = observable(1)
-const countB = observable(2)
-let sum = countA.value + countB.value
+const count = observable(1)
+let double = count.value * 2
 
-const setSum = () => (sum = countA.value + countB.value)
-const unsubA = countA.subscribe(setSum)
-const unsubB = countB.subscribe(setSum)
+count.subscribe(() => {
+    double = count.value * 2
+})
 
-console.log(sum) // 3
+console.log(double) // 2
 countA.value = 2
-console.log(sum) // 4
+console.log(double) // 4
 ```
 
 </v-clicks>
@@ -120,16 +119,3 @@ console.log(sum) // 4
     - Wer kümmert sich um das unsubscriben?
 
 </v-clicks>
-
-<!--
-Hier können wir die Definition vom Anfang ranziehen
-"Automatic state binding and dependency tracking"
-
-# Probleme
-1. Automatic state binding
-    - Manuelles State Binding
-    - Multiple State Binding
-2. Dependency tracking
-    - Wer handelt Unsuscribe?
-    - Deps änderungen sind nicht gut abbildbar
--->

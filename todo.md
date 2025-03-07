@@ -14,12 +14,20 @@
     - Subs rausziehen und eine removeEffect Funktion bauen
 - [x] Keypunkte in Folien fassen
 - [x] Signals Comeback - Knockout.js Probleme
-- [ ] Wie will ich den Talk konkret einleiten?
-    - nicht zu viel auf erster Folie Zeit verbringen
-- [ ] Ist die Historie wichtiges Wissen oder Fun Fact?
+- [x] Preact Zitat auf Deusch übersetzen
+- [x] Pitfall #3 mit Nummer anstatt Boolean?
+- [x] Ist die Historie wichtiges Wissen oder Fun Fact?
+    - Folie dafür erstellen
     - Vielleicht hier explizit erwähnen, dass ich mich gefragt habe, was man hier rausziehen kann oder ob es Fun Fact ist
-- [ ] Deps Tracking beim Coding besser erklären
-- [ ] Pitfall #2 mit Nummer anstatt Boolean?
+- [x] Deps Tracking beim Coding besser erklären
+    - hier muss ich halt üben
+- [x] Den Anfang nochmal neu konzipieren
+    - Problemstellung formulieren
+    - Features von Signals klarer abgrenzen
+- [x] Was passiert mit der "Signals sind überall" Folie?
+- [ ] Dauer verlängern
+    - Reicht da das Ding mit dem Dependency Tracking schon?
+    - JS Proposal mehr beleuchten
 
 ## Vielleicht
 
@@ -28,13 +36,12 @@
 - [x] Menti nutzen? - Wäre bei den Pitfalls sehr nice
       -> Ich denke wir lassen es weg
     - vielleicht nochmal Jules fragen
-- [ ] EnterJS Stand Folie am Ende?
+- [ ] Fix my Code buttons
 
 ## Zum Schluss
 
 - [ ] Light vs. Dark - Slides vergleichen
-- [ ] Whats next
-- [ ] Quellen
+- [ ] Whats next & Quellen
 - [ ] Slides QR Code - use Github tag
 
 # Pitfall Ideen

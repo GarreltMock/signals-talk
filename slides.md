@@ -24,23 +24,33 @@ layout: cover
 </div>
 
 ---
+title: problem-stellung
+class: flex items-center justify-center
+---
+
+<Counter class="scale-[2]" />
+
+<!--
+Vielleicht typischer Counter
+-->
+
+---
 title: Heute
 class: flex flex-col h-full
 ---
 
-# Signals überall
-
 <!-- Vue, Svelte, Angular, SolidJS, Preact, Lit, Javascript :o -->
 
-<div class="relative grow-1">
-    <logos-vue          v-click class="absolute size-35 top-[5%]  left-[5%]"  v-motion :enter="{ x: 0, y: 0 }"  :initial="{ x: -80, y: -80 }" />
-    <logos-svelte-icon  v-click class="absolute size-35 -top-[5%] left-[54%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: -80 }" />
-    <logos-angular-icon v-click class="absolute size-32 top-[65%] left-[75%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: 80, x: 80 }" />
-    <logos-solidjs-icon v-click class="absolute size-30 top-[15%] left-[78%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ x: 80 }" />
-    <logos-preact       v-click class="absolute size-28 top-[50%] left-[55%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: 80 }" />
-    <logos-lit-icon     v-click class="absolute size-22 top-[55%] left-[12%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ x: -80, y: 80 }" />
-    <logos-qwik-icon    v-click class="absolute size-20 top-[75%] left-[33%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: 80 }" />
-    <logos-javascript   v-click class="absolute size-40 top-[22%] left-[27%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: -80 }" />
+<div class="relative grow-1 flex items-center justify-center">
+    <h1 class="text-22! mt-4">Signals</h1>
+    <logos-solidjs-icon v-click class="absolute size-34 top-[55%] left-[5%]"  v-motion :enter="{ x: 0, y: 0 }"  :initial="{ x: -80, y: 80 }" />
+    <logos-vue          v-after class="absolute size-35 top-[15%] left-[78%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ x: 80 }" />
+    <logos-svelte-icon  v-after class="absolute size-35 top-[0%]  left-[54%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: -80 }" />
+    <logos-angular-icon v-after class="absolute size-32 top-[70%] left-[55%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: 80 }" />
+    <logos-preact       v-after class="absolute size-28 top-[60%] left-[80%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: 80, x: 80 }" />
+    <logos-lit-icon     v-after class="absolute size-22 top-[15%] left-[10%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ x: -80, y: -80 }" />
+    <logos-qwik-icon    v-after class="absolute size-20 top-[75%] left-[33%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: 80 }" />
+    <logos-javascript   v-after class="absolute size-32 top-[4%]  left-[30%]" v-motion :enter="{ x: 0, y: 0 }" :initial="{ y: -80 }" />
 </div>
 
 ---
@@ -138,6 +148,10 @@ What's next (for Signals / you)
 - [Double Linked Lists - Preact](https://preactjs.com/blog/signal-boosting/)
 - [Alien Signals](https://github.com/stackblitz/alien-signals)
 - [Signals 2.0](https://www.youtube.com/watch?v=xnmvxWEK25I)
+
+---
+src: ./pages/js-proposal.md
+---
 
 ---
 title: Quellen

@@ -93,3 +93,24 @@ Performance ist einfach so viel besser mit Signals + Fine-grained Updates
     V-DOM kann da nicht mithalten
     https://www.youtube.com/watch?v=kkUuaqDBSqA&t=5655s
 -->
+
+---
+title: Learning
+class: flex flex-col
+---
+
+<h1 class="my4!">Blick in die Vergangenheit</h1>
+
+<div class="grow-1 flex items-center justify-center -mt-20">
+    <div class="b-8 rounded-[32px] b-orange px-20 font-bold color-orange text-32 leading-32 pt-4" v-click v-motion :enter="{ scale: 1, rotate: -14 }" :initial="{ scale: 4 }">
+        lohnt sich
+    </div>
+</div>
+
+<!--
+- Learning 1: Technologie ist oft zyklisch – gute Ideen verschwinden nicht, sie kommen zurück
+- **Learning 2: Alte Konzepte werden neu interpretiert und verbessert**
+    - Evolutionärer Schritt
+    - es lohnt sich zu schauen, wo neue Dinge herkommen
+- Learning 3: Entwickler sollten nicht nur auf neue Hypes setzen, sondern auch aus der Vergangenheit lernen
+-->
