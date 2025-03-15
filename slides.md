@@ -140,9 +140,9 @@ title: Zusammenfassung
 
 ---
 
-# Bonus
+# What's next
 
-What's next (for Signals / you)
+for Signals / you
 
 - [TC39 Javascript Proposal](https://github.com/tc39/proposal-signals?tab=readme-ov-file)
 - [Double Linked Lists - Preact](https://preactjs.com/blog/signal-boosting/)

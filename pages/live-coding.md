@@ -1,5 +1,6 @@
 ---
 layout: section
+hide: true
 ---
 
 # Let's Code

@@ -42,7 +42,6 @@ zb. Promises sind primitive Bausteine für asynchrone Abläufe.
 
 ---
 title: Beispiel
-class: content-center
 ---
 
 # Wie sieht das aus?
@@ -59,7 +58,7 @@ count.value += 1 // Effect: 4
 console.log(double.value) // 4
 ```
 
-<div class="key-components flex gap-8 justify-center mt-8">
+<div class="key-components flex gap-8 mt-8">
     <div v-click="1">signal</div>
     <div v-click="2">computed</div>
     <div v-click="3">effect</div>

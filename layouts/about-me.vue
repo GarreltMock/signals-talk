@@ -5,13 +5,12 @@
                 <h1 class="text-6xl">Garrelt Mock</h1>
                 <span class="mt-4">Spiele Entwickler</span>
                 <ul>
-                    <li>5+ Jahre Frontend Erfahrung</li>
                     <li>
                         Fokus auf Vue
                         <logos-vue class="inline-block h-[1em]" />
                     </li>
-                    <li>Bad Nauheim, Deutschland 🇩🇪</li>
                     <li>
+                        <!-- Vielleicht am Ende -->
                         <a href="https://programmier.bar">programmier.bar</a>
                         <img class="ml-2 inline-block h-[1em]" src="/img/pb.png" />
                     </li>
