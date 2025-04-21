@@ -3,12 +3,10 @@ layout: section
 class: text-left
 ---
 
-# Common Pitfalls
-
-_a.k.a._ gemeine Fallgruben
+# Gemeine Fallgruben
 
 <!--
-_a.k.a._ gemeinsame Fallgruben
+_frei übersetzt von_ common Pitfalls
 -->
 
 ---
@@ -19,12 +17,14 @@ title: Pitfall
 
 Signals auspacken
 
-```js
-const foo = signal(1)
+```js {monaco-run}
+import { signal } from "./signals.js"
+const foo = signal(false)
 
-console.log(foo) // { value: (...) }
+console.log(foo)
+
 if (foo) {
-    // ist immer true
+    console.log("Hallo EnterJS")
 }
 
 const a = foo.value // a ist nicht mehr reaktiv
@@ -82,7 +82,7 @@ effect(async () => {
 ```
 
 ```ts {all|7,10|1-2,5,7,10|1,3,5,7,10|1,3,5,8|1,4,5,8|4,9}
-effect(fn) {
+function effect(fn) {
     activeSubscriber = fn
     fn()
     activeSubscriber = null

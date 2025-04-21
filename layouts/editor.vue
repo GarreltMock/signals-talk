@@ -1,9 +1,9 @@
 <template>
     <div class="slidev-layout p-0 flex flex-row h-full my-editor">
-        <div class="flex-basis-[25%] p-6">
+        <div class="flex-basis-[20%] p-2">
             <slot />
         </div>
-        <div class="flex-basis-[75%] pr-1">
+        <div class="flex-basis-[80%] pr-2">
             <slot name="right" />
         </div>
     </div>

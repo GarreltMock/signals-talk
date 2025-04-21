@@ -25,9 +25,16 @@
     - Problemstellung formulieren
     - Features von Signals klarer abgrenzen
 - [x] Was passiert mit der "Signals sind überall" Folie?
-- [ ] Dauer verlängern
-    - Reicht da das Ding mit dem Dependency Tracking schon?
-    - JS Proposal mehr beleuchten
+- [x] Beim Live Coding: linker Text größer?
+- [x] Live Coding Bug (Zähler geht immernoch hoch obwohl es nicht mehr als effect gekoppelt ist. Warum?)
+    - Da wird irgendeine Dependency nicht richtig aufgeräumt
+- [x] Programmier.bar Schriftart am Ende - ist custom made
+- [x] JS Proposal als Backup noch etwas mehr beleuchten
+- [x] Deps Tracking Live Coding üben
+- [x] Reaktive Grundbausteine nicht unterstreichen, sondern Orange färben mit einer kleinen Pop Animation
+- [x] Social Media / Kontakt möglichkeiten
+- [ ] Vielleicht beim Live Coding anzeigen, welche Funktion wir gerade entwickeln
+    - Sowas wie ein Inhaltsverzeichnis
 
 ## Vielleicht
 
@@ -36,13 +43,27 @@
 - [x] Menti nutzen? - Wäre bei den Pitfalls sehr nice
       -> Ich denke wir lassen es weg
     - vielleicht nochmal Jules fragen
+- [x] Timeline anpassen
+    - Farbunterschiede raus?
+    - andere Zeitpunkte andeuten
+    - Sven meint auf der Tonspur reicht
+- [ ] Observer Patter Usage eher mit einem effect machen. Dann können wir das Live Coding besser aufbauen
 - [ ] Fix my Code buttons
 
 ## Zum Schluss
 
 - [ ] Light vs. Dark - Slides vergleichen
-- [ ] Whats next & Quellen
-- [ ] Slides QR Code - use Github tag
+- [ ] _Whats Next & Quellen_ checken
+- [ ] Slides QR Code - use Github tags / pages
+- [ ] Check presenter Setup with an external monitor
+    - switching between the modes
+
+# Zeiten beim Probelauf
+
+14min bis zum Livecoding
+30min bis nach Livecoding
+38min nach Pitfalls
+46min bis zu Fragen
 
 # Pitfall Ideen
 

@@ -2,15 +2,18 @@
 layout: section
 ---
 
-# Blick unter die Haube 👀
+# Blick unter die Haube
 
 ---
 title: stichwort
-class: flex flex-col items-center justify-center
+class: content-center
 ---
 
-<h2 class="mb-2 text-10!">Stichwort</h2>
-<h1 class="color-orange text-6xl!">Observer Pattern</h1>
+<div class="*:text-30 *:leading-[0.9em] *:font-bold">
+    <div>Stichwort</div>
+    <div class="-mt-3 color-orange">Observer</div>
+    <div class="-mt-4 color-orange">Pattern</div>
+</div>
 
 ---
 title: UML

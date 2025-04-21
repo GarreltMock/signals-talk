@@ -20,16 +20,13 @@ export default defineCodeRunnersSetup(() => {
             // Only for simple demo, it doesn't work with imports from other packages
             scripts = scripts.replace(
                 /import ({[^}]+}) from ['"]vue['"]/g,
-                (_, imports) =>
-                    `const ${imports.replace(/\sas\s/g, ":")} = Vue`,
+                (_, imports) => `const ${imports.replace(/\sas\s/g, ":")} = Vue`,
             )
             scripts += "\nreturn __Component"
 
             // Create function to evaluate the script and get the component
             // Note this is not sandboxed, it's NOT secure.
-            const component = new Function(`return (Vue) => {${scripts}}`)()(
-                Vue,
-            )
+            const component = new Function(`return (Vue) => {${scripts}}`)()(Vue)
 
             // Mount the component
             const app = Vue.createApp(component)
@@ -39,6 +36,15 @@ export default defineCodeRunnersSetup(() => {
             return {
                 element: el,
             }
+        },
+        async javascript(code, context) {
+            const button = document.getElementById("button1")
+            if (button) {
+                const clone = button.cloneNode(true)
+                button.replaceWith(clone)
+            }
+
+            return await context.run(code, "js")
         },
     }
 })

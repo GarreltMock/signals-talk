@@ -42,10 +42,10 @@ class: flex justify-center flex-col relative
 ---
 
 <div class="*:text-30 *:leading-[0.8em] *:font-bold">
-    <div v-click>Signals</div>
-    <div v-click>sind</div>
-    <div v-click class="color-orange -mt-4 font-italic">nichts</div>
-    <div v-click class="color-orange -mt-6">neues</div>
+    <div>Signals</div>
+    <div>sind</div>
+    <div class="color-orange -mt-4 font-italic">nichts</div>
+    <div class="color-orange -mt-6">neues</div>
 </div>
 
 <div v-click class="absolute right-40 rotate-20 flex flex-col items-center top-30">
@@ -73,44 +73,20 @@ aber im Prinzip müssen wir darauf hier auch nicht eingehen
 -->
 
 ---
-title: comeback
-hide: true
+title: keypoint
+class: content-center
 ---
 
-# Das Comeback
-
-Aber warum?
-
-<div class="relative top-20 w-full text-center text-26 italic font-[var(--prism-font-family)]" v-click v-motion :enter="{ x: 0, y: 0 }" :initial="{ x: -1000 }">
-Performance
+<div class="*:text-30 *:leading-[0.8em] *:font-bold">
+    <div>Nutz</div>
+    <div>die</div>
+    <div class="color-orange">Community</div>
 </div>
 
 <!--
-- Fine-Grained Updates haben unglaublich gute Performance
-- Knockout.js Probleme gelöst
+"Wenn ihr das nächste mal vor einem Problem steht ..."
+"Building software is a team sport"
+Entwicklung ist ein Team-Sport
 
-Performance ist einfach so viel besser mit Signals + Fine-grained Updates
-    V-DOM kann da nicht mithalten
-    https://www.youtube.com/watch?v=kkUuaqDBSqA&t=5655s
--->
-
----
-title: Learning
-class: flex flex-col
----
-
-<h1 class="my4!">Blick in die Vergangenheit</h1>
-
-<div class="grow-1 flex items-center justify-center -mt-20">
-    <div class="b-8 rounded-[32px] b-orange px-20 font-bold color-orange text-32 leading-32 pt-4" v-click v-motion :enter="{ scale: 1, rotate: -14 }" :initial="{ scale: 4 }">
-        lohnt sich
-    </div>
-</div>
-
-<!--
-- Learning 1: Technologie ist oft zyklisch – gute Ideen verschwinden nicht, sie kommen zurück
-- **Learning 2: Alte Konzepte werden neu interpretiert und verbessert**
-    - Evolutionärer Schritt
-    - es lohnt sich zu schauen, wo neue Dinge herkommen
-- Learning 3: Entwickler sollten nicht nur auf neue Hypes setzen, sondern auch aus der Vergangenheit lernen
+Man muss nicht alles neu erfinden
 -->

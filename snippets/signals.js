@@ -1,6 +1,6 @@
 let subscriber = null
 
-function signal(value) {
+export function signal(value) {
     const subscriptions = new Set()
 
     return {
@@ -17,13 +17,13 @@ function signal(value) {
     }
 }
 
-function effect(fn) {
+export function effect(fn) {
     subscriber = fn
     fn()
     subscriber = null
 }
 
-function derived(fn) {
+export function derived(fn) {
     const derived = signal()
     effect(() => {
         derived.value = fn()

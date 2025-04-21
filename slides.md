@@ -10,6 +10,9 @@ title: Signals in Depth
 info: Wie Reaktivität in vielen Frontend-Frameworks funktioniert
 
 layout: cover
+
+monacoRunAdditionalDeps:
+    - ./signals.js
 ---
 
 # Signals in Depth
@@ -54,11 +57,20 @@ class: flex flex-col h-full
 </div>
 
 ---
+layout: about-me
+---
+
+---
 title: Key Point
 class: content-center
 ---
 
-<div class="text-8xl font-bold text-center">Signals sind <span class="color-orange">nicht</span> kompliziert</div>
+<div class="*:text-30 *:leading-[0.8em] *:font-bold">
+    <div>Signals</div>
+    <div>sind</div>
+    <div class="color-orange font-italic ml-[7px]">nicht</div>
+    <div class="color-orange">kompliziert</div>
+</div>
 
 <!--
 Frage ans Publikum:
@@ -68,31 +80,7 @@ Wer weiß wie sie unter der Haube funktionieren?
 -->
 
 ---
-layout: about-me
----
-
-<!--
-Hier könnte ich einen kleinen Witz mit erstem Talk + Dark vs. Light Mode machen
--->
-
----
-title: Inhalt
-class: content-center
-hide: true
----
-
-# Was euch heute erwartet
-
-1. Einordnung + Historie
-2. Blick unter die Haube
-3. Common Pitfalls
-
----
 src: ./pages/definition.md
----
-
----
-src: ./pages/history.md
 ---
 
 ---
@@ -109,24 +97,14 @@ src: ./pages/pitfalls.md
 
 ---
 title: Zusammenfassung
+class: content-center
 ---
 
-<!-- # [Signals sind...]{class=italic}
-
-> TODO
-
-<div class="flex flex-col gap-4 content-center mt-10">
-  <div class="text-18 font-bold">nicht <span class="color-orange">neu</span></div>
-  <div class="text-18 font-bold">nicht <span class="color-orange">kompliziert</span></div>
-  <div class="text-18 font-bold">nicht <span class="color-orange">4-free</span></div>
-</div> -->
-
-<span class="text-14">Jetzt wisst ihr</span>
-
-<div class="flex flex-col gap-4 content-center mt-10 text-14 font-bold">
-  <div v-click><span class="italic font-normal text-10">1.</span> Woher <span class="color-orange">Signals</span> kommen</div>
-  <div v-click><span class="italic font-normal text-10">2.</span> Wie sie <span class="color-orange">implementiert</span> sind</div>
-  <div v-click><span class="italic font-normal text-10">3.</span> Worauf ihr <span class="color-orange">achten</span> müsst</div>
+<div class="*:text-30 *:leading-[0.8em] *:font-bold">
+    <div>Signals</div>
+    <div>sind</div>
+    <div class="color-orange font-italic ml-[7px]">nicht</div>
+    <div class="color-orange">kompliziert</div>
 </div>
 
 <!--
@@ -139,53 +117,113 @@ title: Zusammenfassung
 -->
 
 ---
-
-# What's next
-
-for Signals / you
-
-- [TC39 Javascript Proposal](https://github.com/tc39/proposal-signals?tab=readme-ov-file)
-- [Double Linked Lists - Preact](https://preactjs.com/blog/signal-boosting/)
-- [Alien Signals](https://github.com/stackblitz/alien-signals)
-- [Signals 2.0](https://www.youtube.com/watch?v=xnmvxWEK25I)
+src: ./pages/history.md
+---
 
 ---
-src: ./pages/js-proposal.md
+layout: section
 ---
+
+# Was habt ihr für Fragen?
+
+<div class="absolute bottom-6 left-6 color-white/80 text-4 text-left">
+    <div>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 32 32"
+            class="inline-block h-[1em] mx-[2px]"
+        >
+            <path
+                fill="currentColor"
+                d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2m-2.2 2L16 14.78L6.2 8ZM4 24V8.91l11.43 7.91a1 1 0 0 0 1.14 0L28 8.91V24Z"
+            ></path>
+        </svg>
+        mock@lotum.de
+    </div>
+    <div>
+        <svg class="inline-block h-[1em] -mt-1" viewBox="0 0 256 250" width="1.24em" height="1.2em">
+            <path
+                fill="currentColor"
+                d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46c6.397 1.185 8.746-2.777 8.746-6.158c0-3.052-.12-13.135-.174-23.83c-35.61 7.742-43.124-15.103-43.124-15.103c-5.823-14.795-14.213-18.73-14.213-18.73c-11.613-7.944.876-7.78.876-7.78c12.853.902 19.621 13.19 19.621 13.19c11.417 19.568 29.945 13.911 37.249 10.64c1.149-8.272 4.466-13.92 8.127-17.116c-28.431-3.236-58.318-14.212-58.318-63.258c0-13.975 5-25.394 13.188-34.358c-1.329-3.224-5.71-16.242 1.24-33.874c0 0 10.749-3.44 35.21 13.121c10.21-2.836 21.16-4.258 32.038-4.307c10.878.049 21.837 1.47 32.066 4.307c24.431-16.56 35.165-13.12 35.165-13.12c6.967 17.63 2.584 30.65 1.255 33.873c8.207 8.964 13.173 20.383 13.173 34.358c0 49.163-29.944 59.988-58.447 63.157c4.591 3.972 8.682 11.762 8.682 23.704c0 17.126-.148 30.91-.148 35.126c0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002C256 57.307 198.691 0 128.001 0m-80.06 182.34c-.282.636-1.283.827-2.194.39c-.929-.417-1.45-1.284-1.15-1.922c.276-.655 1.279-.838 2.205-.399c.93.418 1.46 1.293 1.139 1.931m6.296 5.618c-.61.566-1.804.303-2.614-.591c-.837-.892-.994-2.086-.375-2.66c.63-.566 1.787-.301 2.626.591c.838.903 1 2.088.363 2.66m4.32 7.188c-.785.545-2.067.034-2.86-1.104c-.784-1.138-.784-2.503.017-3.05c.795-.547 2.058-.055 2.861 1.075c.782 1.157.782 2.522-.019 3.08m7.304 8.325c-.701.774-2.196.566-3.29-.49c-1.119-1.032-1.43-2.496-.726-3.27c.71-.776 2.213-.558 3.315.49c1.11 1.03 1.45 2.505.701 3.27m9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033c-1.448-.439-2.395-1.613-2.103-2.626c.301-1.01 1.747-1.484 3.207-1.028c1.446.436 2.396 1.602 2.095 2.622m10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95c-1.53.034-2.769-.82-2.786-1.86c0-1.065 1.202-1.932 2.733-1.958c1.522-.03 2.768.818 2.768 1.868m10.555-.405c.182 1.03-.875 2.088-2.387 2.37c-1.485.271-2.861-.365-3.05-1.386c-.184-1.056.893-2.114 2.376-2.387c1.514-.263 2.868.356 3.061 1.403"
+            ></path>
+        </svg>
+        GarreltMock
+    </div>
+    <div>
+        <logos-bluesky class="inline-block h-[1em] -ml-[1px]" />
+        @gamock.bluesky.social
+    </div>
+</div>
+
+<div class="absolute bottom-8 right-8">
+  <span>Slides</span>
+  <div class="size-35 bg-white" />
+</div>
 
 ---
 title: Quellen
 class: flex flex-col
 ---
 
-# Quellen
+# What's next
+
+for Signals / you
+
+<v-clicks>
+
+- [TC39 Javascript Proposal](https://github.com/tc39/proposal-signals?tab=readme-ov-file)
+- [Double Linked Lists - Preact](https://preactjs.com/blog/signal-boosting/)
+- [Alien Signals](https://github.com/stackblitz/alien-signals)
+- [Signals 2.0](https://www.youtube.com/watch?v=xnmvxWEK25I)
+
+</v-clicks>
+
+<v-click>
+
+## Quellen
 
 - https://preactjs.com/guide/v10/signals/
 - https://dev.to/this-is-learning/the-evolution-of-signals-in-javascript-8ob
-- https://youtu.be/1TSLEzNzGQM
 - https://github.com/tesla3327/reactivity-from-scratch
+- https://youtu.be/1TSLEzNzGQM
 - https://youtu.be/kkUuaqDBSqA
 
-<div class="grow-1"/>
+</v-click>
 
-Credits{class=m-0!}
+<v-click>
 
-::div{class='font-200 text-xs'}
-slides created with sli.dev  
-icons from Iconify  
-images from Pexels
-::
+**Credits**: slides erstellt mit sli.dev, icons von Iconify, images von Pexels
 
----
-class: content-center flex justify-center items-center flex-col
----
+</v-click>
 
-# Was habt ihr für Fragen?
-
-<div class="absolute bottom-4 right-4">
+<div class="absolute bottom-8 right-8">
   <span>Slides</span>
-  <div class="size-40 bg-white" />
+  <div class="size-50 bg-white" />
 </div>
+
+<div class="absolute top-28 right-8" v-click>
+    <!-- <div class="text-9 leading-10 font-bold text-center mb-2">Kommt vorbei</div> -->
+    <div class="flex items-center gap-6">
+        <img class="size-18 -scale-x-full relative -mx-5" src="/img/onboarding_girl.svg" />
+        <img class="size-18 relative -mx-5" src="/img/onboarding_men.svg" />
+        <img class="-rotate-12 size-28 relative" src="/img/lotum-dark.png" />
+        <img class="rotate-12 size-28 relative -ml-10" src="/img/pb.png" />
+    </div>
+</div>
+
+<!-- <div class="absolute top-20 right-40 flex flex-col items-center" v-click>
+    <div class="flex">
+        <img class="size-14 -scale-x-full relative -mx-1" src="/img/onboarding_girl.svg" />
+        <img class="size-14 relative -mx-1" src="/img/onboarding_men.svg" />
+    </div>
+    <div class="flex -mt-2 mb-2">
+        <img class="-rotate-12 size-28 relative" src="/img/lotum-dark.png" />
+        <img class="rotate-12 size-28 relative -ml-4" src="/img/pb.png" />
+    </div>
+    <div class="text-7 leading-10 font-bold text-end">Kommt vorbei</div>
+</div> -->
 
 <!--
 TODO: slides QR code, vielleicht zu einem Google Forms Link

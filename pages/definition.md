@@ -4,8 +4,6 @@ layout: section
 
 # Was sind Signals?
 
-und wo kommen sie eigentlich her?
-
 ---
 title: Definition
 layout: quote
@@ -14,12 +12,30 @@ clicks: 3
 
 <span class="text-gray">Preact <logos-preact/></span>
 
-<h1 class="!bg-transparent">Signals sind <span v-mark.underline.orange="{padding: -10}">reaktive Grundbausteine</span> zur Verwaltung des Anwendungszustands</h1>
+<h1 class="!bg-transparent">Signals sind <span class="inline-block" :class="$clicks > 0 && 'text-orange bump'">reaktive Grundbausteine</span> zur Verwaltung des Anwendungszustands</h1>
 
-<div v-click class="text-6" :class="$clicks > 2 && 'text-gray/60'">
+<div v-click="2" class="text-6" :class="$clicks > 2 && 'text-gray/60'">
     Durch <span class="text-initial">automatische Zustandsbindung und Abhängigkeitsverfolgung</span>
     bieten Signals eine hervorragende Benutzerfreundlichkeit und Produktivität, während sie die häufigsten Fallstricke der Zustandsverwaltung vermeiden.
 </div>
+
+<style>
+.bump {
+    animation: bump-anim 0.3s ease-in-out;
+
+    @keyframes bump-anim {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+</style>
 
 <!--
 Quelle: https://preactjs.com/guide/v10/signals/

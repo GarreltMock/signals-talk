@@ -6,15 +6,6 @@
                 <span class="mt-4">Spiele Entwickler</span>
                 <ul>
                     <li>
-                        Fokus auf Vue
-                        <logos-vue class="inline-block h-[1em]" />
-                    </li>
-                    <li>
-                        <!-- Vielleicht am Ende -->
-                        <a href="https://programmier.bar">programmier.bar</a>
-                        <img class="ml-2 inline-block h-[1em]" src="/img/pb.png" />
-                    </li>
-                    <li>
                         <a href="https://lotum.de">Lotum</a>
                         <LightOrDark>
                             <template #dark>
@@ -24,6 +15,15 @@
                                 <img class="ml-2 inline-block h-[1em]" src="/img/lotum-light.png" />
                             </template>
                         </LightOrDark>
+                    </li>
+                    <li>
+                        <a href="https://programmier.bar">programmier.bar</a>
+                        <img class="ml-2 inline-block h-[1em]" src="/img/pb.png" />
+                    </li>
+                    <li>5+ Jahre Frontend Erfahrung</li>
+                    <li>
+                        Fokus auf Vue
+                        <logos-vue class="inline-block h-[1em]" />
                     </li>
                 </ul>
 
