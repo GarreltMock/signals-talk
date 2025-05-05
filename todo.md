@@ -47,16 +47,25 @@
     - Farbunterschiede raus?
     - andere Zeitpunkte andeuten
     - Sven meint auf der Tonspur reicht
-- [ ] Observer Patter Usage eher mit einem effect machen. Dann können wir das Live Coding besser aufbauen
 - [ ] Fix my Code buttons
 
 ## Zum Schluss
 
 - [ ] Light vs. Dark - Slides vergleichen
-- [ ] _Whats Next & Quellen_ checken
+- [x] _Whats Next & Quellen_ checken
 - [ ] Slides QR Code - use Github tags / pages
 - [ ] Check presenter Setup with an external monitor
     - switching between the modes
+
+# Feedback zuhause
+
+- Vor den Fragen Quellen erwähnen
+- Double Beispiel besser erklären
+- Mehr ins Publikum gucken
+- Gestik mehr machen
+- andere Profilbild
+- Komplex vs. Kompliziert
+- JS auch anfangs schon stärker betonen
 
 # Zeiten beim Probelauf
 

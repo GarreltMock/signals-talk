@@ -69,7 +69,7 @@ Asynchrone Subscriber
 
 ````md magic-move {at:2}
 ```ts
-const apiCall = () => new Promise((resolve) => setTimeout(() => resolve(), 0))
+const apiCall = () => new Promise((resolve) => setTimeout(() => resolve(), 5))
 
 const toggle = signal(true)
 const switchToggle = () => (toggle.value = !toggle.value)
@@ -95,7 +95,7 @@ effect(async () => {
 ```
 
 ```ts
-const apiCall = () => new Promise((resolve) => setTimeout(() => resolve(), 0))
+const apiCall = () => new Promise((resolve) => setTimeout(() => resolve(), 5))
 
 const toggle = signal(true)
 const switchToggle = () => (toggle.value = !toggle.value)
@@ -108,7 +108,7 @@ effect(async () => {
 ```
 
 ```ts
-const apiCall = () => new Promise((resolve) => setTimeout(() => resolve(), 0))
+const apiCall = () => new Promise((resolve) => setTimeout(() => resolve(), 5))
 
 const toggle = signal(true)
 const switchToggle = () => (toggle.value = !toggle.value)

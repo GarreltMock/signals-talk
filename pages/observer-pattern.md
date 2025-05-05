@@ -107,7 +107,7 @@ count.subscribe(() => {
 })
 
 console.log(double) // 2
-countA.value = 2
+countA.value += 1
 console.log(double) // 4
 ```
 
@@ -115,9 +115,9 @@ console.log(double) // 4
 
 <v-clicks>
 
-1. Manuelles State Binding
+1. Manuelle Zustandsbindung
     - Umständlich bei mehreren Abhängigkeiten
-2. Dependencies sind lose gekoppelt
+2. Abhängigkeiten sind lose gekoppelt
     - Keine 1:1 Beziehung abgebildet
     - Wer kümmert sich um das unsubscriben?
 
