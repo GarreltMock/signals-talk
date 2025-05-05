@@ -6,21 +6,6 @@
     box-shadow: 0px 3px 0px 0px #528d00;
 }
 
-html.light {
-    .slidev-layout:not(.my-cover) {
-        h1 {
-            color: black;
-            background-color: var(--slidev-theme-primary);
-            width: fit-content;
-            padding: 2px;
-        }
-
-        &.section * {
-            @apply text-left;
-        }
-    }
-}
-
 h1 {
     font-weight: bold;
 }

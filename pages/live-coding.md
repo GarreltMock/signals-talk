@@ -8,7 +8,7 @@ hide: true
 ---
 layout: editor
 title: Live Coding
-hide: false
+hide: true
 ---
 
 <div class="flex flex-col justify-center h-full items-center gap-4 rounded bg-gray bg-opacity-10">
@@ -26,7 +26,7 @@ button.addEventListener("click", () => {})
 
 ---
 title: Ergebnis
-hide: true
+hide: false
 ---
 
 # Live Coding Result

@@ -126,7 +126,7 @@ layout: section
 
 # Was habt ihr für Fragen?
 
-<div class="absolute bottom-6 left-6 color-white/80 text-4 text-left">
+<div class="absolute bottom-6 left-6 text-initial opacity-80 text-4 text-left">
     <div>
         <svg
             xmlns="http://www.w3.org/2000/svg"
