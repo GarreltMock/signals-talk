@@ -53,7 +53,7 @@
 
 - [ ] Light vs. Dark - Slides vergleichen
 - [x] _Whats Next & Quellen_ checken
-- [ ] Slides QR Code - use Github tags / pages
+- [x] Slides QR Code - use Github tags / pages
 - [ ] Check presenter Setup with an external monitor
     - switching between the modes
 

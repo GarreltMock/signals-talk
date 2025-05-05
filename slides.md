@@ -159,7 +159,7 @@ layout: section
 
 <div class="absolute bottom-8 right-8">
   <span>Slides</span>
-  <div class="size-35 bg-white" />
+  <img class="size-35" src="/img/slides-qr.svg" />
 </div>
 
 ---
@@ -192,15 +192,13 @@ for Signals / you
 
 </v-click>
 
-<v-click>
-
+::div{class="opacity-50"}
 **Credits**: slides erstellt mit sli.dev, icons von Iconify, images von Pexels
-
-</v-click>
+::
 
 <div class="absolute bottom-8 right-8">
   <span>Slides</span>
-  <div class="size-50 bg-white" />
+  <img class="size-50" src="/img/slides-qr.svg" />
 </div>
 
 <div class="absolute top-28 right-8" v-click>

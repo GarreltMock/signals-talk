@@ -8,6 +8,7 @@ hide: true
 ---
 layout: editor
 title: Live Coding
+hide: false
 ---
 
 <div class="flex flex-col justify-center h-full items-center gap-4 rounded bg-gray bg-opacity-10">
@@ -28,6 +29,55 @@ title: Ergebnis
 hide: true
 ---
 
-# Result
+# Live Coding Result
 
-<<< @/snippets/signals.js
+```js {all}{ maxHeight:'90%' }
+let subscriber = null
+let depsMap = new Map()
+
+function signal(value) {
+    const notify = () => depsMap.get(obj)?.forEach((fn) => fn())
+
+    const obj = {
+        get value() {
+            if (subscriber) {
+                if (!depsMap.get(obj)) {
+                    depsMap.set(obj, new Set())
+                }
+                depsMap.get(obj).add(subscriber)
+            }
+            return value
+        },
+        set value(updated) {
+            value = updated
+            notify()
+        },
+    }
+
+    return obj
+}
+
+function unsubscribe(fn) {
+    depsMap.forEach((subscriber) => {
+        if (subscriber.has(fn)) {
+            subscriber.delete(fn)
+        }
+    })
+}
+
+function effect(fn) {
+    subscriber = fn
+    fn()
+    subscriber = null
+
+    return () => unsubscribe(fn)
+}
+
+function derived(fn) {
+    const derived = signal()
+    effect(() => {
+        derived.value = fn()
+    })
+    return derived
+}
+```

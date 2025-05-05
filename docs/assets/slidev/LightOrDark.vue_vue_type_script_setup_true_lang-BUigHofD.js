@@ -1,1 +1,0 @@
-import{d as s,K as o,f as e}from"../modules/vue-Ce80C8wT.js";import{i as t}from"../monaco/bundled-types-BTx04qH9.js";const p=s({__name:"LightOrDark",setup(a){return(r,n)=>o(t)?e(r.$slots,"dark",{key:0}):e(r.$slots,"light",{key:1})}});export{p as _};

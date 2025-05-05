@@ -24,8 +24,6 @@ class: flex flex-col
 
 <div class="grow-1" />
 
-<v-clicks>
-
 ```mermaid
 classDiagram
 
@@ -54,8 +52,6 @@ class Subscriber {
 
 Observable *-- Subscriber
 ```
-
-</v-clicks>
 
 <div class="grow-1" />
 
