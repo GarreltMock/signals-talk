@@ -61,6 +61,13 @@ layout: about-me
 ---
 
 ---
+title: Raise Hand
+class: content-center
+---
+
+<div class="text-50 text-center">✋</div>
+
+---
 title: Key Point
 class: content-center
 ---
@@ -196,19 +203,19 @@ for Signals / you
 **Credits**: slides erstellt mit sli.dev, icons von Iconify, images von Pexels
 ::
 
-<div class="absolute bottom-8 right-8">
+<div class="absolute bottom-8 right-8 text-center">
   <span>Slides</span>
   <img class="size-50" src="/img/slides-qr.svg" />
 </div>
 
-<div class="absolute top-28 right-8" v-click>
-    <!-- <div class="text-9 leading-10 font-bold text-center mb-2">Kommt vorbei</div> -->
-    <div class="flex items-center gap-6">
-        <img class="size-18 -scale-x-full relative -mx-5" src="/img/onboarding_girl.svg" />
-        <img class="size-18 relative -mx-5" src="/img/onboarding_men.svg" />
-        <img class="-rotate-12 size-28 relative" src="/img/lotum-dark.png" />
-        <img class="rotate-12 size-28 relative -ml-10" src="/img/pb.png" />
+<div class="absolute top-22 right-8" v-click>
+    <div class="relative flex items-center justify-center gap-6">
+        <img class="size-18 -scale-x-full absolute -top-8 -left-2 -rotate-18" src="/img/onboarding_girl.svg" />
+        <img class="size-18 absolute -top-6 -right-2 rotate-18" src="/img/onboarding_men.svg" />
+        <img class="-rotate-12 size-28 relative -mx-5" src="/img/pb.png" />
+        <img class="rotate-12 size-28 relative -mx-5" src="/img/lotum-light.png" />
     </div>
+    <div class="text-9 leading-10 font-bold text-center mt-2 color-primary">Kommt vorbei</div>
 </div>
 
 <!-- <div class="absolute top-20 right-40 flex flex-col items-center" v-click>
