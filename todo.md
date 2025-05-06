@@ -51,7 +51,7 @@
 
 ## Zum Schluss
 
-- [ ] Light vs. Dark - Slides vergleichen
+- [x] Light vs. Dark - Slides vergleichen
 - [x] _Whats Next & Quellen_ checken
 - [x] Slides QR Code - use Github tags / pages
 - [ ] Check presenter Setup with an external monitor

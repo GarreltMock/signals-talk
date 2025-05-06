@@ -18,6 +18,14 @@ h1 {
     --slidev-theme-primary: #cfff00;
 }
 
+body {
+    color: #000;
+}
+
+.dark body {
+    color: #fff;
+}
+
 .slidev-layout blockquote {
     --uno: "border-l-3";
 }
