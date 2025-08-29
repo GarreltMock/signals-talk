@@ -5,15 +5,15 @@ type Entry = {
     description: string
 }
 const items: Entry[] = [
-    { year: 1969, title: "LANPAR", description: "Erstes digitales Spreadsheet" },
-    { year: 1985, title: "Excel", description: "Reaktive Daten erweisen sich als sehr mächtig" },
+    { year: 1969, title: "LANPAR", description: "First digital spreadsheet" },
+    { year: 1985, title: "Excel", description: "Reactive data proves to be very powerful" },
     {
         year: 2010,
         title: "Angular, Barebone, Knockout",
-        description: "Frontend Frameworks mit 3 verschiedenen Reaktivitäts-Modellen",
+        description: "Frontend frameworks with 3 different reactivity models",
     },
-    { year: 2013, title: "React", description: "Gute DX durch Konsistenz und Nachvollziehbarkeit" },
-    { year: 2021, title: "SolidJS", description: "Signals wurde als Begriff geprägt" },
+    { year: 2013, title: "React", description: "Good DX through consistency and traceability" },
+    { year: 2021, title: "SolidJS", description: "Signals was coined as a term" },
 ]
 
 const tlColors = mixColors("#FFCF4A", "#6940B5", items.length)

@@ -3,19 +3,19 @@ layout: section
 class: text-left
 ---
 
-# Gemeine Fallgruben
+# Common Pitfalls
 
 <!--
-_frei übersetzt von_ common Pitfalls
+_freely translated from_ common Pitfalls
 -->
 
 ---
 title: Pitfall
 ---
 
-# Fallgrube #1
+# Pitfall #1
 
-Signals auspacken
+Unpacking Signals
 
 ```js {monaco-run}
 import { signal } from "./signals.js"
@@ -24,19 +24,19 @@ const foo = signal(false)
 console.log(foo)
 
 if (foo) {
-    console.log("Hallo {{ $slidev.configs.conferenceName }}")
+    console.log("Hello ct-webdev")
 }
 
-const a = foo.value // a ist nicht mehr reaktiv
+const a = foo.value // a is no longer reactive
 ```
 
 ---
 title: Pitfall
 ---
 
-# Fallgrube #2
+# Pitfall #2
 
-Rekursions Problem
+Recursion Problem
 
 ```ts
 const count = signal(0)
@@ -63,9 +63,9 @@ blockquote {
 title: Pitfall
 ---
 
-# Fallgrube #3
+# Pitfall #3
 
-Asynchrone Subscriber
+Asynchronous Subscribers
 
 ````md magic-move {at:2}
 ```ts
@@ -115,7 +115,7 @@ const switchToggle = () => (toggle.value = !toggle.value)
 
 const show = signal(false)
 effect(() => {
-    const currentToggle = toggle.value // Jetzt wird `toggle` getrackt!
+    const currentToggle = toggle.value // Now `toggle` is tracked!
     apiCall().then(() => (show.value = currentToggle))
 })
 ```
@@ -127,7 +127,7 @@ effect(() => {
 </div>
 
 <blockquote v-click="12" class="border-yellow! mt-2">
-Achtung: Hier können Race-Conditions entstehen
+Warning: Race conditions can occur here
 </blockquote>
 
 ---
@@ -135,9 +135,9 @@ title: Pitfall
 hide: true
 ---
 
-# Bonus Fallgrube
+# Bonus Pitfall
 
-Typing Probleme - <logos-vue/> spezifisch
+Typing Issues - <logos-vue/> specific
 
 ```ts twoslash
 import { ref, reactive } from "vue"

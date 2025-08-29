@@ -2,15 +2,15 @@
 layout: section
 ---
 
-# Blick unter die Haube
+# A Look Under the Hood
 
 ---
-title: stichwort
+title: Keyword
 class: content-center
 ---
 
 <div class="*:text-30 *:leading-[0.9em] *:font-bold">
-    <div>Stichwort</div>
+    <div>Keyword</div>
     <div class="-mt-3 color-orange">Observer</div>
     <div class="-mt-4 color-orange">Pattern</div>
 </div>
@@ -59,7 +59,7 @@ Observable *-- Subscriber
 title: Code Example
 ---
 
-# Code Beispiel
+# Code Example
 
 ```js {1,21|2-3|5-11,19|5,12-19|all}
 function observable(value) {
@@ -85,14 +85,14 @@ function observable(value) {
 ```
 
 ---
-title: Probleme
+title: Problems
 ---
 
-# Was fehlt?
+# What's missing?
 
 <v-clicks>
 
-> "Automatische Zustandsbindung und Abhängigkeitsverfolgung" - Preact
+> "Automatic state binding and dependency tracking" - Preact
 
 ```js
 const count = observable(1)
@@ -111,10 +111,10 @@ console.log(double) // 4
 
 <v-clicks>
 
-1. Manuelle Zustandsbindung
-    - Umständlich bei mehreren Abhängigkeiten
-2. Abhängigkeiten sind lose gekoppelt
-    - Keine 1:1 Beziehung abgebildet
-    - Wer kümmert sich um das unsubscriben?
+1. Manual state binding
+    - Cumbersome with multiple dependencies
+2. Dependencies are loosely coupled
+    - No 1:1 relationship mapped
+    - Who takes care of the subscription?
 
 </v-clicks>

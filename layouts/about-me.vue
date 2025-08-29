@@ -3,7 +3,7 @@
         <div class="flex items-center h-full">
             <div class="flex flex-col gap-4 w-1/2">
                 <h1 class="text-6xl">Garrelt Mock</h1>
-                <span class="mt-4">Spiele Entwickler</span>
+                <span class="mt-4">Game Developer</span>
                 <ul>
                     <li>
                         <a href="https://lotum.de">Lotum</a>
@@ -22,7 +22,7 @@
                     </li>
                     <!-- <li>5+ Jahre Frontend Erfahrung</li> -->
                     <li>
-                        Fokus auf Vue
+                        Focus on Vue
                         <logos-vue class="inline-block h-[1em]" />
                     </li>
                 </ul>

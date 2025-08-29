@@ -2,7 +2,7 @@
 title: Timeline
 ---
 
-# Blick in die Vergangenheit
+# A Look into the Past
 
 <Timeline />
 
@@ -37,15 +37,15 @@ Signals haben es geschafft die fine-grained updates Probleme zu lösen.
 -->
 
 ---
-title: Signals nichts neues
+title: Signals nothing new
 class: flex justify-center flex-col relative
 ---
 
 <div class="*:text-30 *:leading-[0.8em] *:font-bold">
     <div>Signals</div>
-    <div>sind</div>
-    <div class="color-orange -mt-4 font-italic">nichts</div>
-    <div class="color-orange -mt-6">neues</div>
+    <div>are</div>
+    <div class="color-orange -mt-4 font-italic">nothing</div>
+    <div class="color-orange -mt-6">new</div>
 </div>
 
 <div v-click class="absolute right-40 rotate-20 flex flex-col items-center top-30">
@@ -73,13 +73,13 @@ aber im Prinzip müssen wir darauf hier auch nicht eingehen
 -->
 
 ---
-title: keypoint
+title: Key Point
 class: content-center
 ---
 
 <div class="*:text-30 *:leading-[0.8em] *:font-bold">
-    <div>Nutz</div>
-    <div>die</div>
+    <div>Use</div>
+    <div>the</div>
     <div class="color-orange">Community</div>
 </div>
 

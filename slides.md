@@ -7,7 +7,7 @@ mdc: true
 colorSchema: auto
 
 title: Signals in Depth
-info: Wie Reaktivität in vielen Frontend-Frameworks funktioniert
+info: How reactivity works in many frontend frameworks
 conferenceName: EnterJS
 
 layout: cover
@@ -18,7 +18,7 @@ monacoRunAdditionalDeps:
 
 # Signals in Depth
 
-### [Wie Reaktivität in vielen Frontend-Frameworks funktioniert]{style="background-color:var(--slidev-theme-primary);color:black;padding:0 4px"}
+### [How reactivity works in many frontend frameworks]{style="background-color:var(--slidev-theme-primary);color:black;padding:0 4px"}
 
 <div class="absolute -bottom-2 right-5 text-3 origin-top-left translate-x-[100%] rotate-270 opacity-50">
 <LightOrDark>
@@ -34,12 +34,8 @@ class: flex items-center justify-center
 
 <Counter class="scale-[2]" />
 
-<!--
-Vielleicht typischer Counter
--->
-
 ---
-title: Heute
+title: Today
 class: flex flex-col h-full
 ---
 
@@ -73,11 +69,11 @@ title: Key Point
 class: content-center
 ---
 
-<div class="*:text-30 *:leading-[0.8em] *:font-bold">
+<div class="*:text-30 *:leading-[0.7em] *:font-bold">
     <div>Signals</div>
-    <div>sind</div>
-    <div class="color-orange font-italic ml-[7px]">nicht</div>
-    <div class="color-orange">kompliziert</div>
+    <div class="mt-4">are</div>
+    <div class="color-orange font-italic ml-[7px]">not</div>
+    <div class="color-orange">complicated</div>
 </div>
 
 <!--
@@ -104,15 +100,15 @@ src: ./pages/pitfalls.md
 ---
 
 ---
-title: Zusammenfassung
+title: Summary
 class: content-center
 ---
 
-<div class="*:text-30 *:leading-[0.8em] *:font-bold">
+<div class="*:text-30 *:leading-[0.7em] *:font-bold">
     <div>Signals</div>
-    <div>sind</div>
-    <div class="color-orange font-italic ml-[7px]">nicht</div>
-    <div class="color-orange">kompliziert</div>
+    <div class="mt-4">are</div>
+    <div class="color-orange font-italic ml-[7px]">not</div>
+    <div class="color-orange">complicated</div>
 </div>
 
 <!--
@@ -132,7 +128,7 @@ src: ./pages/history.md
 layout: section
 ---
 
-# Was habt ihr für Fragen?
+# What questions do you have?
 
 <div class="absolute bottom-6 left-6 text-initial opacity-80 text-4 text-left">
     <div>
@@ -160,8 +156,8 @@ layout: section
         GarreltMock
     </div>
     <div>
-        <logos-bluesky class="inline-block h-[1em] -ml-[1px]" />
-        @gamock.bluesky.social
+        <logos-linkedin-icon class="inline-block h-[1em] ml-[1px]" />
+        garrelt-mock-92a934192
     </div>
 </div>
 
@@ -171,7 +167,7 @@ layout: section
 </div>
 
 ---
-title: Quellen
+title: Sources
 class: flex flex-col
 ---
 
@@ -184,13 +180,13 @@ for Signals / you
 - [TC39 Javascript Proposal](https://github.com/tc39/proposal-signals?tab=readme-ov-file)
 - [Double Linked Lists - Preact](https://preactjs.com/blog/signal-boosting/)
 - [Alien Signals](https://github.com/stackblitz/alien-signals)
-- [Signals 2.0](https://www.youtube.com/watch?v=xnmvxWEK25I)
+- [Signals 2.0](https://www.youtube.com/watch?v=WLvAJYHQ9m0)
 
 </v-clicks>
 
 <v-click>
 
-## Quellen
+## Sources
 
 - https://preactjs.com/guide/v10/signals/
 - https://dev.to/this-is-learning/the-evolution-of-signals-in-javascript-8ob
@@ -200,8 +196,8 @@ for Signals / you
 
 </v-click>
 
-::div{class="opacity-50"}
-**Credits**: slides erstellt mit sli.dev, icons von Iconify, images von Pexels
+::div{class="opacity-50 mt-3"}
+**Credits**: slides created with sli.dev, icons from Iconify, images from Pexels
 ::
 
 <div class="absolute bottom-8 right-8 text-center">
@@ -209,7 +205,7 @@ for Signals / you
   <img class="size-50" src="/img/slides-qr.svg" />
 </div>
 
-<div class="absolute top-22 right-8" v-click>
+<!-- <div class="absolute top-22 right-8" v-click>
     <div class="relative flex items-center justify-center gap-6">
         <img class="size-18 -scale-x-full absolute -top-8 -left-2 -rotate-18" src="/img/onboarding_girl.svg" />
         <img class="size-18 absolute -top-6 -right-2 rotate-18" src="/img/onboarding_men.svg" />
@@ -217,7 +213,7 @@ for Signals / you
         <img class="rotate-12 size-28 relative -mx-5" src="/img/lotum-light.png" />
     </div>
     <div class="text-9 leading-10 font-bold text-center mt-2 color-primary">Kommt vorbei</div>
-</div>
+</div> -->
 
 <!-- <div class="absolute top-20 right-40 flex flex-col items-center" v-click>
     <div class="flex">

@@ -2,7 +2,7 @@
 layout: section
 ---
 
-# Was sind Signals?
+# What are Signals?
 
 ---
 title: Definition
@@ -12,11 +12,10 @@ clicks: 3
 
 <span class="text-gray">Preact <logos-preact/></span>
 
-<h1 class="!bg-transparent">Signals sind <span class="inline-block" :class="$clicks > 0 && 'text-orange bump'">reaktive Grundbausteine</span> zur Verwaltung des Anwendungszustands</h1>
+<h1 class="!bg-transparent">Signals are <span class="inline-block" :class="$clicks > 0 && 'text-orange bump'">reactive primitives</span> for managing application state</h1>
 
 <div v-click="2" class="text-6" :class="$clicks > 2 && 'text-gray/60'">
-    Durch <span class="text-initial">automatische Zustandsbindung und Abhängigkeitsverfolgung</span>
-    bieten Signals eine hervorragende Benutzerfreundlichkeit und Produktivität, während sie die häufigsten Fallstricke der Zustandsverwaltung vermeiden.
+    <span class="text-initial">Automatic state binding and dependency tracking</span> allows Signals to provide excellent ergonomics and productivity while eliminating the most common state management footguns.
 </div>
 
 <style>
@@ -57,10 +56,10 @@ zb. Promises sind primitive Bausteine für asynchrone Abläufe.
 -->
 
 ---
-title: Beispiel
+title: Example
 ---
 
-# Wie sieht das aus?
+# How does it look?
 
 ```js {all|3|4|5|7-9|all} { fontSize: $slidev.configs.myEditorFontSize }
 import { signal, computed, effect } from "@preact/signals"
