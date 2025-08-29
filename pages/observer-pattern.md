@@ -61,7 +61,7 @@ title: Code Example
 
 # Code Beispiel
 
-```js {1,21|2-3|5-11,19|5,12-19|all}{ maxHeight:'90%' }
+```js {1,21|2-3|5-11,19|5,12-19|all}
 function observable(value) {
     const subscribers = new Set()
     const notifySubscriber = () => subscribers.forEach((fn) => fn())
@@ -103,7 +103,7 @@ count.subscribe(() => {
 })
 
 console.log(double) // 2
-countA.value += 1
+count.value += 1
 console.log(double) // 4
 ```
 

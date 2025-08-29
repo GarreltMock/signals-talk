@@ -20,7 +20,7 @@
                         <a href="https://programmier.bar">programmier.bar</a>
                         <img class="ml-2 inline-block h-[1em]" src="/img/pb.png" />
                     </li>
-                    <li>5+ Jahre Frontend Erfahrung</li>
+                    <!-- <li>5+ Jahre Frontend Erfahrung</li> -->
                     <li>
                         Fokus auf Vue
                         <logos-vue class="inline-block h-[1em]" />
