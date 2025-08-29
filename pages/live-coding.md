@@ -13,7 +13,7 @@ hide: false
 
 <div class="flex flex-col justify-center h-full items-center gap-4 rounded bg-gray bg-opacity-10">
   <button id="button1" class="custom-button">Click me</button>
-  <p class="text-6" id="text1">Hello {{ $slidev.configs.conferenceName }}</p>
+  <p class="text-6" id="text1">Hello ct-webdev</p>
 </div>
 
 ::right::
