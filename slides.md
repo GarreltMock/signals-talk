@@ -208,7 +208,7 @@ for Signals / you
   <img class="size-50" src="/img/slides-qr.png" />
 </div>
 
-<div class="absolute top-22 right-8" v-click>
+<!-- <div class="absolute top-22 right-8" v-click>
     <div class="relative flex items-center justify-center gap-6">
         <img class="size-18 -scale-x-full absolute -top-8 -left-2 -rotate-18" src="/img/onboarding_girl.svg" />
         <img class="size-18 absolute -top-6 -right-2 rotate-18" src="/img/onboarding_men.svg" />
@@ -216,7 +216,7 @@ for Signals / you
         <img class="rotate-12 size-28 relative -mx-5" src="/img/lotum-light.png" />
     </div>
     <div class="text-9 leading-10 font-bold text-center mt-2 color-primary">Kommt vorbei</div>
-</div>
+</div> -->
 
 <!-- <div class="absolute top-20 right-40 flex flex-col items-center" v-click>
     <div class="flex">
