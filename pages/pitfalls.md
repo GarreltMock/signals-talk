@@ -24,7 +24,7 @@ const foo = signal(false)
 console.log(foo)
 
 if (foo) {
-    console.log("Hallo {{ $slidev.configs.conferenceName }}")
+    console.log("Hallo EnterJS")
 }
 
 const a = foo.value // a ist nicht mehr reaktiv

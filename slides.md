@@ -8,7 +8,6 @@ colorSchema: auto
 
 title: Signals in Depth
 info: Wie Reaktivität in vielen Frontend-Frameworks funktioniert
-conferenceName: EnterJS
 
 layout: cover
 
