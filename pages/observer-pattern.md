@@ -2,7 +2,7 @@
 layout: section
 ---
 
-# A Look Under the Hood
+# Under the Hood
 
 ---
 title: Keyword

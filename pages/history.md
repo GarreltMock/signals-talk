@@ -2,7 +2,7 @@
 title: Timeline
 ---
 
-# A Look into the Past
+# Looking back
 
 <Timeline />
 
@@ -78,8 +78,8 @@ class: content-center
 ---
 
 <div class="*:text-30 *:leading-[0.8em] *:font-bold">
-    <div>Use</div>
-    <div>the</div>
+    <div class="mb-8">Engage</div>
+    <div>with the</div>
     <div class="color-orange">Community</div>
 </div>
 
