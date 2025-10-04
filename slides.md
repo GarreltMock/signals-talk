@@ -166,7 +166,7 @@ layout: section
 
 <div class="absolute bottom-8 right-8">
   <span>Slides</span>
-  <img class="size-35" src="/img/slides-qr.svg" />
+  <img class="size-35" src="/img/slides-qr.png" />
 </div>
 
 ---
@@ -205,7 +205,7 @@ for Signals / you
 
 <div class="absolute bottom-8 right-8 text-center">
   <span>Slides</span>
-  <img class="size-50" src="/img/slides-qr.svg" />
+  <img class="size-50" src="/img/slides-qr.png" />
 </div>
 
 <div class="absolute top-22 right-8" v-click>
